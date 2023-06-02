@@ -5,17 +5,20 @@
         new User('Zequi', 'ezequielito123'),
         new User('Santypo', 'goku123')
     ];
-    $testUser = new User('admin', 'admin');
+    $AdminUser = new User('admin', 'admin');
    
     if(isset($_GET['user']) && isset($_GET['password'])){
         $name = $_GET['user'];
         $password = $_GET['password'];
-        echo '<p>'.$testUser->getName().'</p>';
      
         foreach($usuarios as $usuario){
-            if($usuario->getName() == $name && $password == $usuario->getPassword()){
-                
-                break;
+            if($usuario->getName() == $name){
+                if($password == $usuario->getPassword()) {
+                    echo '<h1>Bienvenido '.$usuario->getName().'!</h1>';
+                    break;
+                } else {
+                    echo 'Contraseña no valida';
+                }
             }
         }
     } else {
