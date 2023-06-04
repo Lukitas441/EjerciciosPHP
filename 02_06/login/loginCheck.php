@@ -7,7 +7,7 @@
     ];
     $AdminUser = new User('admin', 'admin');
    
-    if(isset($_GET['user']) && isset($_GET['password'])){
+    if($_GET !== 'user' && $_GET['password'] && isset($_GET['user']) && isset($_GET['password'])){
         $name = $_GET['user'];
         $password = $_GET['password'];
      

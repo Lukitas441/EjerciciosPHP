@@ -40,4 +40,19 @@ button {
     margin:5px;
     width: 100px;
     height: 40px;
+    padding-bottom: 4px;
+    
+    background: transparent;
+    border: solid 1.5px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 100%;
+    transition: .25s;
+}
+button:hover {
+    background: black;
+    color: beige;
+    transition: .25s;
 }
