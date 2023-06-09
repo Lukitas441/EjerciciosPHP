@@ -8,10 +8,13 @@
 <body>
     <?php
     session_start();
-    if(isset($_SESSION['contador']) == false) {
-        $_SESSION['contador'] = 0;
+    
+    if(!(isset($_SESSION['inicioExitoso']))) {
+        echo '<p>No has iniciado sesión</p><br><p>Inicia sesión <a href="./index.html">aqui</a></p>';
+        
+    } else {
+        echo '<h1>Bienvenido a la pagina A</h1>';
     }
-    echo '<a href="">Recargaste la página '.++$_SESSION['contador'].' veces</a>'
     ?>
 </body>
 </html>
