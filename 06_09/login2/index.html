@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="https://kit.fontawesome.com/6b0ad3d290.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Inicio de sesión</h1>
-    <div id="container">
+    <div id="container" class="shadow">
         <form action="./loginCheck.php" method="get">
             <div class="input-container">
                 <label for="">Nombre de usuario</label>
-                <input type="text" name="user">
+                <input type="text" name="user" required>
             </div>
             <div class="input-container">
                 <label for="">Constraseña</label>
-                <input type="password" name="password">
+                <input type="password" id="password" name="password" required autocomplete="on">
+                <i class="fa-solid fa-eye-slash hidden" id="seekingBtn"></i>
             </div>
             <button type="submit">Ingresar</button>
         </form>
     </div>
+    <script src="passwordSeeing.js"></script>
 </body>
 </html>
