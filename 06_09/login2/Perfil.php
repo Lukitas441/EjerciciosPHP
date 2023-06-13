@@ -23,7 +23,9 @@
     <script>
         const exitBtn = document.querySelector(".exit-btn");
 
-        exitBtn.addEventListener("click", () => window.location.hr
+        exitBtn.addEventListener("click", () => {
+            window.location.href = 'index.html'
+        })
     </script>
 </body>
 </html>
