@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/6b0ad3d290.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="log-in" class="container">
+        <h1>Inicio de sesión</h1>
+    <div class="shadow second-container">
+        <form action="../loginCheck.php" method="get">
+            <div class="input-container">
+                <label for="">Nombre de usuario</label>
+                <input type="text" name="user" required>
+            </div>
+            <div class="input-container">
+                <label for="">Constraseña</label>
+                <input type="password" class="password" name="password" required autocomplete="on" id="password-login">
+                <i class="fa-solid fa-eye-slash" id="seekingBtn"></i>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+        
+    </div>
+    <p>clickea <b class="switch">aquí</b> para registrarte</p>
+    </div>
+    <div id="sign-in" class="container hidden">
+        <h1>Registrate</h1>
+        <div class="shadow second-container">
+            <form action="" method="get">
+                <div class="input-container">
+                    <label for="">Nombre de usuario</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-container">
+                    <label for="">Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="">Contraseña</label>
+                    <input type="password" required id="password-signin" class="password">
+                    <i class="fa-solid fa-eye-slash" id="seekingBtn"></i>
+                </div>
+                <div class="input-container">
+                    <label for="">Confirmar contraseña</label>
+                    <input type="password" required id="passwordCheck-signin" class="password">
+                    <i class="fa-solid fa-eye-slash" id="seekingBtn"></i>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    <p>Si ya tienes una cuenta clickea <b class="switch">aquí</b></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
