@@ -62,13 +62,14 @@ i{
     background-color: red;
     transition: .25s;
 }
-#form-container {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: beige;
     padding: 10px;
     width: 400px;
+    height: 335px;
     position: absolute;
     top: 20%;
     z-index: 10;
@@ -86,7 +87,7 @@ form {
     flex-direction: column;
     width: 100%;
 }
-input {
+#save input {
     padding: 10px;
     width: 100%;
     height: 40px;
@@ -132,4 +133,19 @@ button:hover {
 
 .hidden {
     display: none !important;
+}
+
+#radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px;
+}
+#data-container {
+    display: flex;
+    flex-direction: row;
+}
+#delete input {
+    margin: 0 10px;
+    align-items: start;
 }

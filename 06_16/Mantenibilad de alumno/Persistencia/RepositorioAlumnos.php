@@ -16,7 +16,7 @@
         }
         
         public function deleteAlumno($idAlumno) {
-            unset($this->listaDeAlumnos[$idAlumno]);
+            array_splice($this->listaDeAlumnos, $idAlumno, 1);
         }
     }
 ?>

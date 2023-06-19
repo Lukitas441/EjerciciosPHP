@@ -1,11 +1,25 @@
-const saveBtn = document.querySelector('#saveAlumno')
-const delBtn = document.querySelector('#deleteAlumno')
-const closeBtn = document.querySelector('.close-btn')
-const sendBtn = document.querySelector('#send-btn')
+const saveBtn = document.querySelector("#saveAlumno");
+const delBtn = document.querySelector("#deleteAlumno");
+const closeBtns = document.querySelectorAll(".close-btn");
+const sendBtns = document.querySelectorAll(".send-btn");
 
-const studentInput = document.querySelector('#form-container')
+const studentInput = document.querySelector("#save");
+const studentEraser = document.querySelector("#delete");
 
-saveBtn.addEventListener('click', () => studentInput.classList.remove('hidden'))
+saveBtn.addEventListener("click", () =>
+  studentInput.classList.remove("hidden")
+);
+delBtn.addEventListener("click", () =>
+  studentEraser.classList.remove("hidden")
+);
 
-closeBtn.addEventListener('click', () => studentInput.classList.add('hidden'))
-sendBtn.addEventListener('click', () => studentInput.classList.add('hidden'))
+closeBtns.forEach((btn) =>
+  btn.addEventListener("click", (e) =>
+    e.currentTarget.parentElement.classList.add("hidden")
+  )
+);
+sendBtns.forEach((btn) =>
+  btn.addEventListener("click", (e) =>
+    e.currentTarget.parentElement.classList.add("hidden")
+  )
+);

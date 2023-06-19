@@ -10,10 +10,10 @@
 </head>
 <body>
     <div id="main-container">
-        <div  id="form-container" class="hidden">
-        <i class="fa-solid fa-x fa-xl close-btn"></i>
+        <div  id="save" class="hidden container">
+            <i class="fa-solid fa-x fa-xl close-btn"></i>
             <h2>Ingresar datos</h2>
-            <form action="../Controlador/Controlador.php" method="get">
+            <form action="../Controlador/ControladorSave.php" method="get">
                 <div class="input-container">
                     <label for="">Nombre</label>
                     <input type="text" name="name" required>
@@ -27,9 +27,10 @@
                     <input type="email" name="email" required>
                 </div>
                 
-                <button type="submit" id="send-btn">Cargar</button>
+                <button type="submit" class="action-btn">Cargar</button>
             </form>
         </div>
+
         <div>
         <table>
             <tr>
@@ -61,6 +62,29 @@
             <i class="fa-solid fa-floppy-disk fa-xl" id="saveAlumno"></i>
             <i class="fa-solid fa-delete-left fa-xl"  id="deleteAlumno"></i>
         </div> 
+
+        <div id="delete" class="container hidden">
+            <i class="fa-solid fa-x fa-xl close-btn"></i>
+            <h2>Selecciona para eliminar</h2>
+            <form action="../Controlador/ControladorDelete.php" method="get">
+                <?php
+                if(!empty($_SESSION['listaAlumnos']->listarAlumnos())) {
+                    $index = 0;
+                    echo '<div id="radio-container">';
+                    foreach ($_SESSION['listaAlumnos']->listarAlumnos() as $alumno) {
+                        echo '<div id="data-container">';
+                        echo '<input type="radio" name="idAlumno" value="'.$index.'">';
+                        echo '<p>'.$alumno->getName().' '.$alumno->getSurname().'</p>';
+                        echo "</div>";  
+                        $index++;
+                    }
+                    echo "</div>";  
+                    
+                }
+                ?>
+                <button type="submit" class="action-btn">Eliminar</button>
+            </form>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

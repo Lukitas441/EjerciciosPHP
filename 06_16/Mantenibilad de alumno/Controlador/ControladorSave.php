@@ -9,6 +9,6 @@ if(isset($_GET['name']) && isset($_GET['surname']) && isset($_GET['email'])) {
     
     $_SESSION['listaAlumnos']->addAlumno($name, $surname, $email);
 }
-header('location: ..\aMainPage\index.php')
+header('location: ..\aMainPage\index.php');
 
 ?>
