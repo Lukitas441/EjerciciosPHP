@@ -45,6 +45,9 @@
                 if(!(isset($_SESSION['listaAlumnos']))) {
                     $_SESSION['listaAlumnos'] = new RepositorioAlumnos();
                 }
+                /* for ($i=0; $i <10 ; $i++) { 
+                    $_SESSION['listaAlumnos']->addAlumno('juan', 'perez', 'juanpe@gmail.com');
+                } */
                 if(!empty($_SESSION['listaAlumnos']->listarAlumnos())) {
                     foreach ($_SESSION['listaAlumnos']->listarAlumnos() as $alumno) {
                         echo '<tr>';
@@ -80,6 +83,8 @@
                     }
                     echo "</div>";  
                     
+                } else {
+                    echo '<p>Todavia no has registrado a nadie</p>';
                 }
                 ?>
                 <button type="submit" class="action-btn">Eliminar</button>
