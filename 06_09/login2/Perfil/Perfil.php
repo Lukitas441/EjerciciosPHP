@@ -10,11 +10,11 @@
 </head>
 <body>
     <?php
-        include '../User.php';
+        include '../Users/User.php';
         session_start();
 
         if(!(isset($_SESSION['inicioExitoso']))) {
-            header( 'Location: ./login/index.html' );
+            header( 'location: ../login/' );
         }
         echo '<div><i class="fa-solid fa-x exit-btn"></i></div>';
         echo '<h1>Bienvenido '.$_SESSION['usuarioConectado']->getName().'!</h1>';

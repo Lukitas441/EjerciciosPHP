@@ -9,12 +9,11 @@
 </head>
 <body>
     <?php
-    include '../User.php';
+    include '../Users/User.php';
     session_start();
     
     if(!(isset($_SESSION['inicioExitoso']))) {
-        header( 'Location: ./login/index.html' );
-        
+        header( 'location: ../login' );
     }
 
     echo '<div id="img_container">';

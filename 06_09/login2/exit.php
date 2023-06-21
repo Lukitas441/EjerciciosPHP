@@ -1,5 +1,5 @@
 <?php
     session_start();
-    session_destroy();
-    header('location: ./login/index.html')
+    unset($_SESSION['inicioExitoso']);
+    header('location: ./login')
 ?>

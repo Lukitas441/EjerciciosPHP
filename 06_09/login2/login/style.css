@@ -45,6 +45,12 @@ input {
     transition: .5s;
     color: black;
 }
+#password-alert{
+    color: red;
+    font-size: small;
+    background-color: rgba(224, 14, 14, 0.2);
+    padding: 3px;
+}
 .hidden {
     transform: scale(.1);
     display: none;

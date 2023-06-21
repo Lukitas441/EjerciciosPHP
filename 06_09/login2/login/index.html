@@ -32,18 +32,18 @@
     <div id="sign-in" class="container hidden">
         <h1>Registrate</h1>
         <div class="shadow second-container">
-            <form action="" method="get">
+            <form action="../signinCheck.php" method="post" id="signin-form">
                 <div class="input-container">
                     <label for="">Nombre de usuario</label>
-                    <input type="text" required>
+                    <input type="text" name="user" required>
                 </div>
                 <div class="input-container">
                     <label for="">Email</label>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                 </div>
                 <div class="input-container">
                     <label for="">Contraseña</label>
-                    <input type="password" required id="password-signin" class="password">
+                    <input type="password" name="password" required id="password-signin" class="password">
                     <i class="fa-solid fa-eye-slash" id="seekingBtn"></i>
                 </div>
                 <div class="input-container">
@@ -51,10 +51,11 @@
                     <input type="password" required id="passwordCheck-signin" class="password">
                     <i class="fa-solid fa-eye-slash" id="seekingBtn"></i>
                 </div>
-                <button type="submit">Ingresar</button>
+                <p id="password-alert" class="hidden"></p>
+                <button type="submit" >Ingresar</button>
             </form>
         </div>
-    <p>Si ya tienes una cuenta clickea <b class="switch">aquí</b></p>
+    <p >Si ya tienes una cuenta clickea <b class="switch">aquí</b></p>
     </div>
     <script src="app.js"></script>
 </body>

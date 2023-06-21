@@ -10,7 +10,8 @@
 </head>
 <body>
     <div id="main-container">
-        <div  id="save" class="hidden container">
+        <div id="blur-bg" class="hidden"></div>
+        <div  id="save" class="container hidden">
             <i class="fa-solid fa-x fa-xl close-btn"></i>
             <h2>Ingresar datos</h2>
             <form action="../Controlador/ControladorSave.php" method="get">
