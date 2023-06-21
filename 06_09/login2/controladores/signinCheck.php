@@ -1,5 +1,5 @@
 <?php
-    include './Users/listaUsers.php';
+    include '../Users/listaUsers.php';
     session_start();
     if(!(isset($_SESSION['Usuarios']))){
         $_SESSION['Usuarios'] = new listaUsers();
@@ -17,11 +17,11 @@
         }
         if($newUsuario) {
             $_SESSION['Usuarios']->addUser($name, $email, $password);
-            header( 'Location: ./login/index.html' );
+            header( 'Location: ../login/index.html' );
         } else {
             echo '<h2>Registro fallido</h2><br> Vuelva a intentarlo';
         }
     } else {
-        header( 'Location: ./login/index.html' );
+        header( 'Location: ../login/index.html' );
     }
 ?>
