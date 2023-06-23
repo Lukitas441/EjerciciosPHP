@@ -8,7 +8,6 @@ const alertPassword = document.querySelector('#password-alert')
 function togglePassword(eye, passwordInput) {
   eye.classList.toggle("fa-eye");
   eye.classList.toggle("fa-eye-slash");
-    console.log("hola");
   passwordInput.type = passwordInput.type === "password" ? "text" : "password";
 }
 
