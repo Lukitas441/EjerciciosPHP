@@ -37,7 +37,7 @@
             foreach (Alumno::getRepo() as $alumno) {
                 echo '
                 <div id="data-container">
-                <input type="radio" value='.$alumno->getEmail().' name="ID"></input>
+                <input type="radio" value='.$alumno->getName().'+'.$alumno->getSurname().' name="ID"></input>
                 <p>'.$alumno->getName().' '.$alumno->getSurname().'</p>
                 </div>
                 ';

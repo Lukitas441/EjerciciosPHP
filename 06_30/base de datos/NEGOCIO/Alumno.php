@@ -29,9 +29,9 @@ include '../PERSISTENCIA/repoAlumnos.php';
             $repoAlumnos = new RepositorioAlumnos();
             $repoAlumnos->addAlumno($alumno->getName(), $alumno->getSurname(), $alumno->getEmail());
         }
-        public static function deleteFromRepo($ID) {
+        public static function deleteFromRepo($nameID, $surnameID) {
             $repoAlumnos = new RepositorioAlumnos();
-            $repoAlumnos->deleteAlumno($ID);
+            $repoAlumnos->deleteAlumno($nameID, $surnameID);
         }
     }
 ?>

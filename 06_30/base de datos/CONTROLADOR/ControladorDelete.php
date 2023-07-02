@@ -1,8 +1,10 @@
 <?php
 include '../NEGOCIO/Alumno.php';
 if(isset($_POST['ID'])) {
-    $emailAsID = $_POST['ID'];
-    Alumno::deleteFromRepo($emailAsID);
+    $nameID = explode('+', $_POST['ID'])[0];
+    $surnameID = explode('+', $_POST['ID'])[1];
+
+    Alumno::deleteFromRepo($nameID, $surnameID);
 }
 header('location: ..\0_MAIN\index.php');
 ?>

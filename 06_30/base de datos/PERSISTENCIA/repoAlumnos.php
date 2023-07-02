@@ -17,17 +17,23 @@ class RepositorioAlumnos {
                 $row['name'],
                 $row['surname'],
                 $row['email'],
-                $row['id']
             ));
          }
          return $estudiantes;
     }
     public function addAlumno($name, $surname, $email) {
+        $listaActual = $this->getAlumnos();
+        foreach($listaActual as $alumno) {
+            if($alumno->getName() == $name && $alumno->getSurname() == $surname) {
+                return;
+            }
+        }
+
         $stmt = $this->PDO->prepare('INSERT INTO alumnos (name, surname, email) VALUES ("'.$name.'", "'.$surname.'", "'.$email.'")');
         $stmt->execute();
     }
-    public function deleteAlumno($ID) {
-        $stmt = $this->PDO->prepare('DELETE FROM alumnos WHERE email = "'.$ID.'"');
+    public function deleteAlumno($name, $surname) {
+        $stmt = $this->PDO->prepare('DELETE FROM alumnos WHERE name = "'.$name.'" AND surname = "'.$surname.'"');
         $stmt->execute();
     }
 }
