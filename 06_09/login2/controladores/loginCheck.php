@@ -7,7 +7,6 @@
         $_SESSION['Usuarios'] = new listaUsers();
     }
     
-
     if(isset($_GET['user']) && isset($_GET['password'])){
         $name = $_GET['user'];
         $password = $_GET['password'];

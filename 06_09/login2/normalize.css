@@ -40,6 +40,6 @@ button {
 }
 button:hover {
     background: black;
-    color: beige;
+    color: white;
     transition: .25s;
 }
