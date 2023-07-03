@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+
+
+
+.fa-x{
+    border: 2px red solid;
+    color: red;
+    top:10px;
+    right: 10px;
+    padding-left: 12.5px;
+    border-radius: 5px;
+    transition: .25s;
+}
+.fa-x:hover{
+    background: red;
+    color: beige;
+    transition: .25s;
+}
+
+button {
+    margin:5px;
+    width: 100px;
+    height: 40px;
+    padding-bottom: 4px;
+    
+    background: transparent;
+    border: solid 1.5px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 100%;
+    transition: .25s;
+}
+button:hover {
+    background: black;
+    color: beige;
+    transition: .25s;
+}
+
+#img_container {
+    width:300px;
+    height:300px;
+    overflow:hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: .5s;
+}
+#img_container:hover {
+    width:350px;
+    height:350px;
+    transition: .5s;
+
+    box-shadow:  -14px 14px 45px #a7a7a7,
+                14px -14px 45px #fbfbfb;
+}
+img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+a{
+    margin: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: .20s;
+}
+a:hover {
+    color: beige;
+    border: black 1px solid;
+    background-color: black;
+    transition: .20s;
+}

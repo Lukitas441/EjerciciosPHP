@@ -45,11 +45,19 @@ input {
     transition: .5s;
     color: black;
 }
-#password-alert{
+#password-alert, #alert{
     color: red;
     font-size: small;
     background-color: rgba(224, 14, 14, 0.2);
     padding: 3px;
+}
+#alert {
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+}
+.alert-good{
+    background-color: rgba(49, 224, 14, 0.2);
 }
 .hidden {
     transform: scale(.1);

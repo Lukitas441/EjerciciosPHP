@@ -10,10 +10,27 @@
     <script src="https://kit.fontawesome.com/6b0ad3d290.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php
+    session_start();
+    if(isset($_SESSION['inicioExitoso']) && !$_SESSION['inicioExitoso']){
+        echo '<p id="alert">Las credenciales son incorrectas</p>';
+        unset($_SESSION['inicioExitoso']);
+    }
+
+    if(isset($_SESSION['newUsuario'])) {
+        if($_SESSION['newUsuario']) {
+            echo '<p id="alert" class="alert-good">Registro realizado con exito</p>';
+        }
+        if(!$_SESSION['newUsuario']){
+            echo '<p id="alert">Registro fallido, datos invalidos</p>';
+        }
+        unset($_SESSION['newUsuario']);
+    }
+    ?>
     <div id="log-in" class="container">
         <h1>Inicio de sesión</h1>
     <div class="shadow second-container">
-        <form action="../controladores/loginCheck.php" method="get">
+        <form action="../CONTROLADORES/loginCheck.php" method="post">
             <div class="input-container">
                 <label for="">Nombre de usuario</label>
                 <input type="text" name="user" required>
@@ -32,7 +49,7 @@
     <div id="sign-in" class="container hidden">
         <h1>Registrate</h1>
         <div class="shadow second-container">
-            <form action="../controladores/signinCheck.php" method="post" id="signin-form">
+            <form action="../CONTROLADORES/signinControl.php" method="post" id="signin-form">
                 <div class="input-container">
                     <label for="">Nombre de usuario</label>
                     <input type="text" name="user" required>
