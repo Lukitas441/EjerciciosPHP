@@ -5,13 +5,15 @@ const containers = document.querySelectorAll(".container");
 const signinForm = document.querySelector("#signin-form");
 const alertPassword = document.querySelector("#password-alert");
 
-const alert = document.querySelector('#alert')
+const alert = document.querySelector("#alert");
+const allElementsInBody = document.querySelectorAll("body > *");
+
+allElementsInBody.forEach((elemnt) => {
+  elemnt.addEventListener("click", () =>
+    alert != null ? alert.remove() : null
+  );
+});
 console.log(alert);
-if(alert != undefined) {
-  setTimeout(() => {
-    alert.remove()
-  }, 4000);
-}
 
 function togglePassword(eye, passwordInput) {
   eye.classList.toggle("fa-eye");

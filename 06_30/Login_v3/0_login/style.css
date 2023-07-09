@@ -52,12 +52,14 @@ input {
     padding: 3px;
 }
 #alert {
+    margin-top: 10px;
+    width: 310px;
     padding: 10px;
     position: absolute;
-    top: 50px;
 }
 .alert-good{
-    background-color: rgba(49, 224, 14, 0.2);
+    background-color: rgba(49, 224, 14, 0.2) !important;
+    color: green !important;
 }
 .hidden {
     transform: scale(.1);
