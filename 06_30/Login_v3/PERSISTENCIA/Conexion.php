@@ -11,8 +11,8 @@ class Conexion {
     private $puerto;
 
     public function __construct() {
-        $this->user = 'lukitas';
-        $this->password = '55214412';
+        $this->user = 'lucas';
+        $this->password = '2004';
         $this->baseDeDatos = 'registro_usuarios';
         $this->puerto = 3306;
     } 
