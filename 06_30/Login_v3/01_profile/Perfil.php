@@ -22,7 +22,7 @@
     <script>
         const exitBtn = document.querySelector(".exit-btn");
 
-        exitBtn.addEventListener("click", () => { window.location.href = "../controladores/exitSession.php"; });
+        exitBtn.addEventListener("click", () => { window.location.href = "../CONTROLADORES/exitSession.php"; });
     </script>
 </body>
 </html>
