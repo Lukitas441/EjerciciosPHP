@@ -15,15 +15,21 @@ class RepositorioUsuarios {
 
         while($row = $stmt->fetch()) {
             array_push($users, new User(
+                $row['ID'],
                 $row['user'],
                 $row['email'],
-                $row['password']
+                $row['password'],
+                $row['profile_img']
             ));
         }
         return $users;
     }
-    public function addUser($user) {
-        $stmt = $this->PDO->prepare('INSERT INTO usuarios (user, email, password) VALUES ("'.$user->getName().'","'.$user->getEmail().'","'.$user->getPassword().'")');
+    public function addUser($name, $email, $password) {
+        $stmt = $this->PDO->prepare('INSERT INTO usuarios (user, email, password) VALUES ("'.$name.'","'.$email.'","'.$password.'")');
+        $stmt->execute();
+    }
+    public function setImagen($path, $user){
+        $stmt = $this->PDO->prepare('WHERE ID="'.$user->getId().'" SET profile_img='.$path.';');
         $stmt->execute();
     }
 }

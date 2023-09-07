@@ -17,7 +17,7 @@ if(isset($_POST['user']) && isset($_POST['email']) && isset($_POST['password']))
     }
 
     if($_SESSION['newUsuario']) {
-        User::addToRepo(new User($name, $email, $password));
+        User::addToRepo($name, $email, $password);
     } 
 }
 header( 'Location: ../0_login/' );

@@ -16,6 +16,12 @@
         if(!(isset($_SESSION['inicioExitoso']))) {
             header( 'location: ../0_login/' );
         }
+        echo '<img src="resources/'.'">
+        <form action="../CONTROLADORES/loadProfileImg.php" method="post" enctype="multipart/form-data">
+        <input name="imagen" type="file" required>
+        <button type="submit">Cargar</button>  
+        </form>
+        ';
         echo '<div><i class="fa-solid fa-x exit-btn"></i></div>';
         echo '<h1>Bienvenido '.$_SESSION['usuarioLogeado']->getName().'!</h1>';
     ?>
