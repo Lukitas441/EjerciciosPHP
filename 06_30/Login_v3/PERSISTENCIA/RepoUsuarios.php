@@ -19,17 +19,18 @@ class RepositorioUsuarios {
                 $row['user'],
                 $row['email'],
                 $row['password'],
-                $row['profile_img']
+                $row['profile_img'],
+                $row['imgExt']
             ));
         }
         return $users;
     }
     public function addUser($name, $email, $password) {
-        $stmt = $this->PDO->prepare('INSERT INTO usuarios (user, email, password) VALUES ("'.$name.'","'.$email.'","'.$password.'")');
+        $stmt = $this->PDO->prepare('INSERT INTO usuarios (user, email, password, profile_img, imgExt) VALUES ("'.$name.'","'.$email.'","'.$password.'", "", "")');
         $stmt->execute();
     }
-    public function setImagen($path, $user){
-        $stmt = $this->PDO->prepare('WHERE ID="'.$user->getId().'" SET profile_img='.$path.';');
+    public function setImagen($user, $img, $ext){
+        $stmt = $this->PDO->prepare('UPDATE usuarios SET profile_img="'.$img.'", imgExt="'.$ext.'" WHERE ID="'.$user->getId().'";');
         $stmt->execute();
     }
 }

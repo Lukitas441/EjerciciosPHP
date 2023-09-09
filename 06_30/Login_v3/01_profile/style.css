@@ -13,27 +13,6 @@
     transition: .25s;
 }
 
-button {
-    margin:5px;
-    width: 100px;
-    height: 40px;
-    padding-bottom: 4px;
-    
-    background: transparent;
-    border: solid 1.5px;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 100%;
-    transition: .25s;
-}
-button:hover {
-    background: black;
-    color: beige;
-    transition: .25s;
-}
-
 #img_container {
     width:300px;
     height:300px;
@@ -51,12 +30,32 @@ button:hover {
     box-shadow:  -14px 14px 45px #a7a7a7,
                 14px -14px 45px #fbfbfb;
 }
+button{
+    padding-top: 4px;
+}
+button:hover{
+    color: rgb(235, 192, 255);
+}
 img {
     width:100%;
     height:100%;
     object-fit: cover;
+    transition: .25s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: .25s;
 }
-
+img:hover{
+    transform: scale(2.5) translateY(-10px);
+    transition: .25s;
+    cursor: pointer;
+}
+.imgStatic{
+    transform: scale(2.5) translateY(-10px);
+    transition: .25s;
+}
 a{
     margin: 10px;
     text-decoration: none;
@@ -73,19 +72,39 @@ a:hover {
     background-color: black;
     transition: .20s;
 }
-form > *{
-    border: 1px solid red;
-}
+
 form{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 52%;
+    background-color: rgb(235, 192, 255);
+    border-radius: 5px 15px 15px 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#form-bg{
+    position: absolute;
+    background-color:purple;
+    opacity: .1;
+    width: 100%;
+    height: 100%;
+}
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.hidden{
+    display: none !important;
 }
 
-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid red;
-    overflow: hidden;
+#cancel{
+    width: 90px;
+    height: 30px;
+    margin: 10px;
+}
+#cancel:hover{
+    background-color: rgba(255, 0, 0, 0.76);
 }
