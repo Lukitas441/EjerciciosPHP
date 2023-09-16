@@ -25,14 +25,5 @@ if(!empty($_FILES['imagen'])){
       }
    }
 }
-header('location: ../01_profile/Perfil.php');
-
-function rmContent($dir) {
-   $files = glob($dir . '/*');
-   foreach($files as $file){
-      if(is_file($file)){
-         unlink($file);
-      }
-   }
-}
+header('location: ../01_profile/index.php');
 ?>

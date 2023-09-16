@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="log-in" class="container">
-        <h1>Inicio de sesión</h1>
+        <h1>Inicia sesión</h1>
     <div class="shadow second-container">
         <form action="../CONTROLADORES/loginCheck.php" method="post">
             <div class="input-container">
@@ -33,7 +33,7 @@
         <?php
     session_start();
     if(isset($_SESSION['inicioExitoso']) && !$_SESSION['inicioExitoso']){
-        echo '<p id="alert">Las credenciales son incorrectas</p>';
+        echo '<p id="alert">Los datos son incorrectos</p>';
         unset($_SESSION['inicioExitoso']);
     }
 

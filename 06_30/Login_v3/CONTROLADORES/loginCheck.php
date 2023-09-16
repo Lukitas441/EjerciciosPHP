@@ -17,7 +17,7 @@ if(isset($_POST['user']) && isset($_POST['password'])) {
         }
     }
     if($_SESSION['inicioExitoso']) {
-        header('location: ../01_profile/Perfil.php');
+        header('location: ../01_profile/index.php');
     } else {
         header('location: ../0_login/');
     }

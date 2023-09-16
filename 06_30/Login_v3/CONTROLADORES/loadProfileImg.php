@@ -2,7 +2,6 @@
 include_once '../NEGOCIO/User.php';
 
 function loadProfileImg($user){
-
     $files = glob('../resources/*');
     if(!empty($files)){
         foreach($files as $file){
@@ -15,5 +14,4 @@ function loadProfileImg($user){
     fclose($img);
     return $imgPath;
 }
-
 ?>
