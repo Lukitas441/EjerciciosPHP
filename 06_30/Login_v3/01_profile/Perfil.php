@@ -11,6 +11,7 @@
 <body>
     <?php
         include '../NEGOCIO/User.php';
+        include '../CONTROLADORES/loadProfileImg.php';
         session_start();
         
         if(!(isset($_SESSION['inicioExitoso']))) {
@@ -18,15 +19,10 @@
         }
         $user = $_SESSION['usuarioLogeado'];
 
-        $imgPath = '../resources/'.$user->getId().'profile_img.'.$user->getExt();;
-        $img = fopen($imgPath, 'w');
-        fwrite($img, base64_decode($_SESSION['usuarioLogeado']->getImg()));
-        fclose($img);
-
         if(empty($user->getImg())) {
             echo '<img src="https://www.fpt-law.com/wp-content/uploads/24-248253_user-profile-default-image-png-clipart-png-download-750x656.png">';
         } else {
-            echo '<img src="../resources/'.$imgPath.'">';
+            echo '<img src="../resources/'.loadProfileImg($user).'">';
         }
         
         echo '

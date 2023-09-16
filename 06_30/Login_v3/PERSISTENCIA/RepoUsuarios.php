@@ -9,7 +9,7 @@ class RepositorioUsuarios {
         $this->PDO = $newConnection->getConnection();
     }
 
-    public function getAllUsers(){
+    public function getAllUsers() {
         $users = [];
         $stmt = $this->PDO->query('SELECT * FROM usuarios');
 

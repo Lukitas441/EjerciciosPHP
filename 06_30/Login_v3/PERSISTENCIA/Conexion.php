@@ -4,7 +4,6 @@
 //flush privileges;
 
 class Conexion {
-    private $conn;
     private $user;
     private $password;
     private $baseDeDatos;
@@ -18,7 +17,7 @@ class Conexion {
     } 
 
     public function getConnection() {
-        $dsn ='mysql:host=localhost:'.$this->puerto.';dbname='.$this->baseDeDatos.';charset=UTF8';
+        $dsn ='mysql:host=LucasPC:'.$this->puerto.';dbname='.$this->baseDeDatos.';charset=UTF8';
         try{
             $pdo = new PDO($dsn, $this->user, $this->password);
             if($pdo) {

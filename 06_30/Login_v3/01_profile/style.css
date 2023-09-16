@@ -83,6 +83,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 1s;
 }
 #form-bg{
     position: absolute;
@@ -104,7 +105,19 @@ form{
     width: 90px;
     height: 30px;
     margin: 10px;
+    border: red 1px solid;
+    color: red;
 }
 #cancel:hover{
-    background-color: rgba(255, 0, 0, 0.76);
+    background-color: rgb(255, 0, 0);
+    color: rgb(235, 192, 255);
+}
+@media (max-width: 620px) {
+    form{
+        top: 50%;
+        left: 50%;
+        transform: translatex(-50%);
+        border-radius: 10px;
+        transition: 1s;
+    }
 }
