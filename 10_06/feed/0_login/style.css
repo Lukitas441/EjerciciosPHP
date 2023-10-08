@@ -1,0 +1,77 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    
+   
+}
+.second-container {
+    text-align:left;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+input {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+}
+.input-container{
+    justify-content: left;
+    margin:5px;
+    width: 100%;
+}
+.fa-eye-slash {
+    padding-left: 7px;
+}
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.switch{
+    cursor: pointer;  
+    color: rgb(68, 68, 68);
+    transition: .5s;
+}
+.switch:hover {
+    transition: .5s;
+    color: black;
+}
+#password-alert, #alert{
+    color: red;
+    font-size: small;
+    background-color: rgba(224, 14, 14, 0.2);
+    padding: 3px;
+}
+#alert {
+    margin-top: 10px;
+    width: 310px;
+    padding: 10px;
+    position: absolute;
+}
+.alert-good{
+    background-color: rgba(49, 224, 14, 0.2) !important;
+    color: green !important;
+}
+.hidden {
+    transform: scale(.1);
+    display: none;
+}
+i{
+    position: absolute;
+    padding: 11px 8px;
+    border: solid transparent 1px;
+    cursor: pointer;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    margin-left: -40px;
+}
