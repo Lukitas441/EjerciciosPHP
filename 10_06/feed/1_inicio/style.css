@@ -32,20 +32,28 @@
 }
 .interactions {
     display: flex;
+    position: relative;
     align-items: center;
 }
 .interactions > i{
     cursor: pointer;
-    padding: 4px;
-    margin-right: 2px;
+    margin: 4px 4px 4px 5px;
     border-radius: 50%;
     color: red;
     transition: .05s;
 }
-.interactions > i:hover{
+.interactions > .fa-regular:hover{
+    margin: 0;
+    padding: 4px 4px 4px 5px;
     background-color: rgba(255, 0, 0, 0.521);
     transition: .05s;
 } 
+
+.interactions > p{
+    position: absolute;
+    left: 28px;
+}
+
 #feed{
     overflow-y: scroll;
     height: 75%;
@@ -54,6 +62,7 @@
     
 }
 #btn-refresh{
+    margin-top: 40px;
     padding: 10px;
     border-radius: 5px;
     border: solid 1px black;
@@ -74,4 +83,47 @@
     width: 200px;
     height: 40px;
     padding: 5px;
+}
+#navbar{
+    position: absolute;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#profile-info{
+    border-radius: 10px;
+    padding: 5px; 
+    cursor: pointer;
+    transition: .1s;
+}
+#profile-info:hover{
+    background-color: rgb(153, 153, 153);
+    transition: .1s;
+}
+#profile-info > i {
+    margin-right: 10px;
+}
+.fa-arrow-right-from-bracket{
+    padding: 5px;
+    border-radius: 5px;
+    transition: .1s;
+}
+.fa-arrow-right-from-bracket:hover {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.356);
+    cursor: pointer;
+    transition: .1s;
+}
+#exit-btn{
+    text-decoration: none;
+    color: black;
+}
+#result {
+    position: absolute;
+    top: 60px;
+    left: 5px;
 }

@@ -32,5 +32,11 @@ class RepositorioPost{
     public function savePost($user_id, $content){
         $stmt = $this->PDO->query('INSERT INTO Posts (ID, USER_ID, CONTENT, Fecha) VALUES (NULL, '.$user_id.', "'.$content.'", "'.date('Y-m-d').'");');
     }
+    public function addLike($idPost, $idUser){
+        $stmt = $this->PDO->query('INSERT INTO Likes (USER_ID, POST_ID) VALUES ('.$idUser.','.$idPost.')');
+    }
+    public function removeLike($idPost, $idUser){
+        $stmt = $this->PDO->query('DELETE FROM Likes WHERE USER_ID = "'.$idUser.'" AND POST_ID = "'.$idPost.'"');
+    }
 }
 ?>

@@ -58,5 +58,15 @@ class Post{
         $repoPost = new RepositorioPost();
         $repoPost->savePost($user_id, $content);
     }
+    public static function modLike($idPost, $idUser, $add){
+        $repoPost = new RepositorioPost();
+
+        if($add){
+            $repoPost->addLike($idPost, $idUser);
+        } else {
+            $repoPost->removeLike($idPost, $idUser);
+        }
+        
+    }
 }
 ?>

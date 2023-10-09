@@ -9,7 +9,7 @@ $listPosts = array_reverse(Post::getRepo());
 foreach($listPosts as $post){
     $postOwner = $post->getUser();
     echo '
-    <div class="post-container">
+    <div class="post-container" id="'.$post->getId().'">
         <div class="user-information">
             '.loadProfileImg($postOwner).'
             <p class="username">'.$postOwner->getName().'</p>
