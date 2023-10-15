@@ -41,16 +41,15 @@ function refresh() {
       const heart = e.currentTarget;
 
       let likes = heart.nextElementSibling;
-      heart.classList.contains("fa-regular") ? likes.innerHTML++ : likes.innerHTML--;
+      heart.classList.contains("fa-regular")
+        ? likes.innerHTML++
+        : likes.innerHTML--;
 
       heart.classList.toggle("fa-solid");
       heart.classList.toggle("fa-regular");
 
-      
-
       const postId = heart.parentElement.parentElement.getAttribute("id");
       modLike(postId);
-
     });
   }, 500);
 }
